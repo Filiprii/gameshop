@@ -1,0 +1,13 @@
+footer {
+    border-top: 1px solid $filter-hover;
+    background-color: $dark-grey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 15px;
+
+
+    p {
+        color: $grey;
+        text-align: center;
+    }
+}

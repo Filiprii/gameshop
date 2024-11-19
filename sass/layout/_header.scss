@@ -1,0 +1,175 @@
+header {
+    background-color: $black;
+
+    .pre-header {
+        background: linear-gradient(to right, rgba(6,6,6,1) 0%, rgba(46,46,46,1) 100%);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: table;
+        width: 100%;
+
+        
+
+
+        ul {
+            list-style: none;
+            float: right;
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+                
+
+                a {
+                    color: $grey;
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+
+    .logo a {
+        font-family: 'Pacifico', cursive;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        background-color: transparent;
+        padding: 10px 20px;
+      }
+      
+      .logo a:hover {
+        color: #e073fe;
+      }
+
+    
+    nav {
+        padding: 15px;
+        background-color: $black;
+        width: 100%;
+        z-index: 2;
+        position: relative;
+
+        &.fixed-nav {
+            position: fixed;
+            top: 0;
+            transition: 0.3s;
+
+            @media (max-width: $l) {
+                position: initial;
+            }
+        }
+
+        .hamburger-menu-button {
+            background-color: transparent;
+            border: none;
+            font-size: 38px;
+            color: $white;
+            display: none;
+            outline: none;
+
+            .fa-times {
+                display: none;
+            }
+
+            &.opened {
+                .fa-times {
+                    display: block;
+                }
+
+                .fa-bars {
+                    display: none;
+                }
+            }
+
+            @media (max-width: $l) {
+                display: block;
+            }
+        }
+
+    ul {
+        list-style: none;
+        float: left;
+
+        @media (max-width: $l) {
+            display: none;
+            width: 100%;
+            position: absolute;
+            background-color: $black;
+            left: 0;
+            right: 0;
+        }
+
+
+        li {
+            display: inline-block;
+            margin-left: 30px;
+            position: relative;
+            top: -20px;
+
+            @media (max-width: $l) {
+                margin-left: 0;
+            }
+
+            &:first-child {
+                a:hover {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            @media (max-width: $l) {
+                display: block;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+
+            a {
+                color: $white;
+                font-size: 16px;
+                text-transform: uppercase;
+                text-decoration: none;
+                position: relative;
+                
+                @media (max-width: $l) {
+                    font-size: 20px;
+                }
+
+                &:hover {
+                    &::after {
+                        display: block;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    display: none;
+                    background-color: $white;
+                    height: 2px;
+                    width: 100%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    .nav-right-side {
+        float: right;
+        margin-right: 30px;
+
+        @media (max-width: $l) {
+            position: absolute;
+            right: 30px;
+            top: 15px;
+
+        }
+        
+        a {
+            color: $white;
+        }
+    }
+}
+
+}
